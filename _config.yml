@@ -1,0 +1,14 @@
+#hgihlight: pygments
+#markdown: kramdown
+#kramdown:
+ #input: GFM
+  
+hgihlight: pygments
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - hard_wrap
+    - no_intra_emphasis
+    - autolink
+    - strikethrough
+    - fenced_code_blocks

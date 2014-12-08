@@ -1,0 +1,95 @@
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+body, html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: "Microsoft YaHei",微软雅黑,arial,sans-serif;
+}
+
+.row {
+    height: 100%;
+    /*background-color: #FAFAF6;*/
+}
+
+.nav__bar {
+    height: 100%;
+}
+
+.nav__name {
+    color: #FFFFFF;
+}
+
+#tab__list {
+    background-color: #222E2A;
+    height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+
+.tab__elem {
+    font-size: 20px;
+    /*color: #A4BFB4;*/
+}
+
+#tab__bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+#tab__bottom > .table {
+    margin-bottom: 0px;
+}
+
+#post__list {
+    height: 100%;
+    overflow-y: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-right: 1.5px solid #009A61;
+}
+
+#nav_btn {
+    background-color: #222E2A;
+}
+
+/* --------------------------- */
+.page__container {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.post__title {
+    background-color: #009A61;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #FFF;
+}
+
+.post__content {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+#pjax-container.fadeIn {
+    -webkit-animation: fadeIn .3s;
+    -moz-animation: fadeIn .3s;
+    -ms-animation: fadeIn .3s;
+    -o-animation: fadeIn .3s;
+    animation: fadeIn .3s; }
+#pjax-container.fadeOut {
+    -webkit-animation: fadeOut .2s;
+    -moz-animation: fadeOut .2s;
+    -ms-animation: fadeOut .2s;
+    -o-animation: fadeOut .2s;
+    animation: fadeOut .2s; }

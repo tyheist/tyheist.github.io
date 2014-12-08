@@ -1,0 +1,77 @@
+<div class="row">
+    <!-- Tab list --!>
+    <div id="tab__list" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <!-- Nav avator -->
+        <br><br>
+        <a href="/"><img src="/assets/img/avatar.png" class="img-circle img-thumbnail"></a>
+        <br><br>
+        <div class="nav__name">
+            <h4>Ty</h4>
+        </div>
+        <br><br><br>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-pills nav-stacked" role="tablist" id="navTab">
+            {% for category in site.categories %}
+            <li role="presentation" class="">
+                <a href="#category__{{ category[0] }}" class="tab__elem" role="tab" data-toggle="pill">{{ category[0] }}</a>
+            </li>
+            {% endfor %}
+            <li role="presentation" class="">
+                <a class="tab__elem" href="#category__tags" role="tab" data-toggle="pill">tags</a>
+            </li>
+        </ul>
+
+        <!-- Nav bottom -->
+        <div id="tab__bottom">
+            <table class="table table-condensed">
+                <tr>
+                    <td><a href="#"><i class="fa fa-git fa-2x"></i></a></td>
+                    <td><a href="#"><i class="fa fa-envelope fa-2x"></i></a></td>
+                </tr>
+            </table>
+        </div>
+    </div><!-- End Tab list -->
+
+    <!-- Post list --!>
+    <div id="post__list" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- category list -->
+            {% for category in site.categories %}
+            <div role="tabpanel" class="tab-pane fade" id="category__{{ category[0] }}">
+                <!--<h2>{{ category[0] }}</h2>-->
+                <div class="list-group">
+                    {% for post in category[1] %}
+                    <a href="{{ post.url }}" class="list-group-item pjax-selector">{{ post.title }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- Tags list -->
+            <div role="tabpanel" class="tab-pane fade" id="category__tags">
+                <!--<h2>Tags</h2>-->
+                <div class="panel-group" id="accordion">
+                    {% for tag in site.tags %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#tag__{{ tag[0] }}">{{ tag[0] }}</a>
+                                <span class="badge badge-info pull-right">{{ tag[1].size }}</span>
+                            </h4>
+                        </div>
+                        <div id="tag__{{ tag[0] }}" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                {% for post in tag[1] %}
+                                <a href="{{ post.url }}" class="list-group-item pjax-selector">{{ post.title }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div><!-- End Tags list -->
+        </div><!-- End Tab panes -->
+    </div><!-- End Post list -->
+</div>

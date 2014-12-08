@@ -1,0 +1,37 @@
+---
+layout: base
+---
+<div class="row">
+    <!-- post title -->
+    <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 post__title">
+        <h2>{{ page.title }}</h2>
+        {{ page.date | date:"%Y-%m-%d" }}
+    </div>
+
+    <!-- post content -->
+    <div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 post__content">
+        <div>
+            {{ content }}
+        </div>
+    </div>
+
+    <!-- modal -->
+    <!--
+       -<div id="modal__content" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+       -    <div class="modal-dialog modal-lg">
+       -        <div class="modal-content">
+       -            <div class="modal-header">
+       -                <button type="button" class="close" data-dismiss="modal">
+       -                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+       -                </button>
+       -                <h2>{{ page.title }}</h2>
+       -            </div>
+       -            <div class="modal-body">
+       -                {{ content }}
+       -            </div>
+       -        </div>
+       -    </div>
+       -</div>
+       -->
+
+</div>

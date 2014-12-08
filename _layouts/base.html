@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        {% include head.html %}
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- nav bar -->
+                <div class="nav__bar col-md-4 col-gl-4 col-sm-12 col-xs-12">
+                    {% include navside.html %}
+                </div>
+
+                <!-- content page -->
+                <div class="page__container col-md-8 col-gl-8 col-sm-12 col-xs-12">
+                    <div id="pjax-container">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>
